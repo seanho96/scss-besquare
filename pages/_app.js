@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
       <ThemeProvider>
         <Background>
           <main className="font-sans dark:text-white">
-            <div className="absolute right-0 top-0 mr-4 mt-4 md:mr-6">
+            <div className="absolute right-0 top-0 mr-4 mt-2 md:mr-6">
               <Toggle />
             </div>
 

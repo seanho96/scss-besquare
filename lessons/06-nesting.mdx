@@ -1,0 +1,33 @@
+---
+title: Nesting
+---
+
+When writing HTML you've probably noticed that it has a clear nested and visual hierarchy. CSS, on the other hand, doesn't.
+
+Sass will let you nest your CSS selectors in a way that follows the same visual hierarchy of your HTML. Be aware that overly nested rules will result in over-qualified CSS that could prove hard to maintain and is generally considered bad practice.
+
+## Note
+
+[BEM](http://getbem.com/introduction/) notation for CSS naming is usually used for best practice of having useful descriptive names
+
+## Example
+
+```SCSS
+.main {
+  background-color: coral;
+  padding: 2rem;
+
+  #{&}__paragraph {
+    background-color: teal;
+    padding: 1rem;
+
+    &:hover {
+      background-color: pink;
+    }
+  }
+}
+
+```
+
+* https://codepen.io/seanho96/pen/wvoMPGv
+

@@ -1,0 +1,43 @@
+---
+title: Extend
+---
+There are often cases when designing a page when one class should have all the styles of another class, as well as its own specific styles. 
+For example, the BEM methodology encourages modifier classes that go on the same elements as block or element classes.
+
+* Extend the styles of elements from another element
+* Usage syntax - `@extend .class_name`
+
+## Example
+
+
+```SCSS
+
+@mixin defaultPadding {
+  padding: 2rem 4rem;
+}
+
+.main {
+  background-color: coral;
+  @include defaultPadding;
+  
+  #{&}__paragraph1 {
+    background-color: teal;
+    @include defaultPadding;
+    
+    &:hover {
+      background-color: pink;
+    }
+  }
+  
+  #{&}__paragraph2 {
+    @extend .main__paragraph1;
+      
+      &:hover {
+      background-color: white;
+    }
+  }
+}
+
+```
+
+* https://codepen.io/seanho96/pen/YzpwEQg

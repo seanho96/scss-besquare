@@ -1,0 +1,27 @@
+---
+title: Setting up environment
+---
+
+## Make a new project directory
+```
+mkdir intro-to-sass
+cd intro-to-sass
+```
+
+
+## Set up NPM
+```
+npm init
+```
+
+## Install node-sass
+```
+npm install node-sass
+```
+
+## Set up script for compiling scss in package.json
+```
+"scripts" : {
+    "scss": "node-sass --watch scss -o css"
+}
+```

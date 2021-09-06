@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
-import NodeLogo from '../svgs/node.svg'
+import SassLogo from '../svgs/sass.svg'
 import config from '../config'
 
 const Navbar = () => (
@@ -11,7 +11,7 @@ const Navbar = () => (
     <div className="flex content-center h-full space-x-6">
       <Link href="/">
         <a>
-          <NodeLogo style={{ width: '60px' }} className="h-full" />
+          <SassLogo style={{ width: '50px' }} className="h-full" />
         </a>
       </Link>
       <h3 style={{ lineHeight: '60px' }}>{config.course}</h3>

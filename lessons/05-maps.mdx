@@ -1,0 +1,24 @@
+---
+title: Maps
+---
+
+Maps in Sass hold **pairs of keys and values**, and make it easy to look up a value by its corresponding key. 
+They’re written `(<expression>: <expression>, <expression>: <expression>)`. 
+The expression before the : is the key, and the expression after is the value associated with that key. 
+
+## Example
+
+```SCSS
+// Declaration
+$our-custom-font-weights : (
+  "regular": 400,
+  "medium": 500,
+  "bold": 700,
+);
+
+// Usage
+font-weight: map-get($our-custom-font-weights, bold); // --> font-weight: 700;
+
+```
+
+
